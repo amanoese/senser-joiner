@@ -1,0 +1,5 @@
+ yes |
+  xargs sh -c 'sleep 0.1;./get_x_y |
+  awk "\$1<1000&&\$2<1000" |
+  sed "s/ /\//" |
+  sed "s@.*@http://localhost:5000/&@" | xargs -L1 curl'

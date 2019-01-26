@@ -1,0 +1,2 @@
+#!/bin/bash
+echo /dev/ttyACM{1,0} | xargs -i sh -c 'sleep 0.01;sudo ./senser-joiner.sh {} | xargs'
